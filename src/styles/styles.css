@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Montserrat:wght@300;400;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #3c484e;
+  font-family: "Open Sans", sans-serif;
+}
+
+.Header {
+  background-color: #000;
+  padding: 20px;
+}
+
+.Header-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.Header a {
+  text-decoration: none;
+  color: #15302c;
+}
+
+.Header-logo {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.Header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Header-title h1 {
+  margin: 0;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.Header-title p {
+  margin: 0;
+  color: #aaa;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.Main {
+  padding: 10px;
+  grid-template-columns: minmax(auto, 1400px);
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  background-image: url('/Estrellas.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.Search {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.Search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 20px;
+  border: 2px solid #026c86;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.Search-input:focus {
+  border-color: #000;
+}
+
+/* ===== GRID CONTENEDOR ===== */
+.Characters {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  grid-row-gap: 1.5em;
+  display: grid;
+}
+
+/* ===== TARJETAS HOME ===== */
+.Character-item {
+  text-decoration: none;
+  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  border-radius: 5px;
+  margin: 0 0 20px 0;
+  display: block;
+  animation-duration: 2s;
+  animation-name: fade;
+  background-color: rgba(22, 102, 120, 0.75);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Character-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.Character-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.Character-item h2 {
+  font-size: 18px;
+  font-weight: 300;
+  padding: 5px 10px;
+  color: #fff;
+}
+
+.Character-item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ===== DETALLE PERSONAJE ===== */
+.Character-inner {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  grid-gap: 2rem;
+  align-items: start;
+  padding: 20px;
+}
+
+.Character-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.15);
+}
+
+.Character-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Character-info h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+  color: #fff;
+}
+
+.Character-info h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  border-bottom: 1px solid #85eb52;
+  padding-bottom: 8px;
+  color: #85eb52;
+}
+
+.Character-info h3 span {
+  font-weight: 700;
+  color: #fff;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.Main-loading {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
