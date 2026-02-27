@@ -1,6 +1,6 @@
 import Header from "../templates/Header";
 import Home, { initSearch } from "../pages/Home";
-import Character from "../pages/character";
+import Character from "../pages/Character";
 import Error404 from "../pages/Error404";
 import getHash from "../utils/getHash";
 import resolveRoutes from "../utils/resolveRoute";
